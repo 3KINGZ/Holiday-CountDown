@@ -12,7 +12,7 @@ let holiday = {
     christmasDay: moment("25-12", "DD-MM"),
     boxingDay: moment("26-12", "DD-MM")
 }
-
+let name = "victor"
 //get the countdown in days format 
 const countDown = (hols) => {
     let hd;
@@ -48,6 +48,7 @@ const countDown = (hols) => {
     return countDn;
 }
 
+let isMessage;
 
 //message to be return when the result of the countDown function is being passed
 const message = (days, holiday) => {
@@ -88,15 +89,36 @@ const message = (days, holiday) => {
     } else if (days === 1) {
         return `${holiday} is tomorrow`
     } else if (days > 1) {
+        isMessage = `They are ${days} day(s) till ${holiday}`
         return `They are <span class="underline">${days}</span> day(s) till <span class="underline">${holiday}</span>`;
     }
+}
+
+//dynamic url to be shown on twitter
+const dynamicCurl = "https://boring-pike-841093.netlify.com/"
+
+//function to setup tweeter share values
+const setUpTweetBtn = (dynamicMessage, dynamicCurl) => {
+    let tweetButton = document.createElement("a");
+    tweetButton.textContent = "tweet";
+    tweetButton.setAttribute("href", "https://twitter.com/share?ref_src=twsrc%5Etfw");
+    tweetButton.setAttribute("class", "twitter-share-button");
+    tweetButton.setAttribute("data-size", "large")
+    tweetButton.setAttribute("data-hashtags", "HolidayCountDown")
+    tweetButton.setAttribute("data-text", dynamicMessage);
+    tweetButton.setAttribute('data-url', dynamicCurl)
+    tweetButton.setAttribute("data-show-count", "false")
+    document.querySelector("#tweet").appendChild(tweetButton)
+    twttr.widgets.load();
 }
 
 //render the message(message()) result to the browser
 const renderMessage = (message) => {
     let container = document.querySelector("#message-container");
     container.innerHTML = ""
+    document.querySelector("#tweet").innerHTML = ""
     container.innerHTML = message
+    setUpTweetBtn(isMessage, dynamicCurl)
 }
 
 //adding a change event listener to the select-input

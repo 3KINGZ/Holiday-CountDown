@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #00ffff;
+    background-color: #1cda8a;
 }
 
 #title {
@@ -38,12 +38,17 @@ select {
     text-align: center;
 }
 
+#tweet{
+    text-align: center;
+    margin-top: 2em;
+}
+
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #00ffff;
+    background-color: #078651;
     color: white;
     text-align: center;
 }
