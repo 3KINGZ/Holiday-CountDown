@@ -5,6 +5,7 @@ let holiday = {
     newYear: moment("01-01-2021", "DD-MM-YYYY"),
     easter: moment("13-04", "DD-MM"),
     eidAlFitr: moment("23-05", "DD-MM"),
+    childrenDay: moment("27-05", "DD-MM"),
     democracy: moment("12-06", "DD-MM"),
     eidAlAdha: moment("01-08", "DD-MM"),
     independenceDay: moment("01-10", "DD-MM"),
@@ -25,6 +26,9 @@ const countDown = (hols) => {
         countDn = hd.diff(today, "days")
     } else if (hols === "Eid-Al-Fitr") {
         hd = holiday.eidAlFitr;
+        countDn = hd.diff(today, "days")
+    } else if (hols === "Children-Day") {
+        hd = holiday.childrenDay;
         countDn = hd.diff(today, "days")
     } else if (hols === "Democracy-Day") {
         hd = holiday.democracy;
@@ -66,6 +70,8 @@ const message = (days, holiday) => {
             case "eidAlFitr":
                 greeting = "Eid Mubarak";
                 break;
+            case "childrenDay":
+                greeting = "Happy Children's Day"
             case "Democracy":
                 greeting = "Happy Democracy Day";
                 break;
