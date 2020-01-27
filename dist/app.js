@@ -3,6 +3,7 @@ const today = moment().startOf("day"); //today's date(day)
 //holiday date stored in an object using the moment() to parse 
 let holiday = {
     newYear: moment("01-01-2021", "DD-MM-YYYY"),
+    valentine: moment("14-02", "DD-MM"),
     easter: moment("13-04", "DD-MM"),
     eidAlFitr: moment("23-05", "DD-MM"),
     childrenDay: moment("27-05", "DD-MM"),
@@ -21,6 +22,9 @@ const countDown = (hols) => {
     if (hols === "New-Year") {
         hd = holiday.newYear;
         countDn = hd.diff(today, "days");
+    } else if (hols === "Valentine") {
+        hd = holiday.valentine;
+        countDn = hd.diff(today, "days")
     } else if (hols === "Easter") {
         hd = holiday.easter;
         countDn = hd.diff(today, "days")
@@ -64,6 +68,8 @@ const message = (days, holiday) => {
             case "New-Year":
                 greeting = "it's new year,Hurray, Happy New Year!!!"
                 break;
+            case "valentine":
+                greeting = "Happy Valentine's Day"
             case "easter":
                 greeting = "Happy easter!!!";
                 break;

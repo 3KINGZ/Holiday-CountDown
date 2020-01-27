@@ -23,8 +23,17 @@ body {
     text-decoration: underline;
 }
 
+.notes{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.countdown{
+    margin-top: 50px;;
+}
+
 select {
-    margin-top: 7px;
+    /* margin-top: 7px; */
     width: 50%;
     padding: 16px 20px;
     border: none;
