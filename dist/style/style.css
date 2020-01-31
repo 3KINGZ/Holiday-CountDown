@@ -1,8 +1,9 @@
+
+
 body {
     padding: 0;
     margin: 0;
-    background-color: #1cda8a;
-}
+background: linear-gradient(to right, #2dce89, #11cdef);}
 
 #title {
     border: 1px solid rgb(37, 35, 39);
@@ -57,7 +58,13 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #078651;
+    background-color:linear-gradient(to right, #2dce89, #11cdef);
+    ;
     color: white;
     text-align: center;
+}
+
+.footer-text{
+    color: grey;
+    font-family: sans-serif;
 }

@@ -14,7 +14,7 @@ let holiday = {
     christmasDay: moment("25-12", "DD-MM"),
     boxingDay: moment("26-12", "DD-MM")
 }
-let name = "victor"
+
 //get the countdown in days format 
 const countDown = (hols) => {
     let hd;
@@ -107,7 +107,7 @@ const message = (days, holiday) => {
 }
 
 //dynamic url to be shown on twitter
-const dynamicCurl = "https://boring-pike-841093.netlify.com/"
+const dynamicCurl = "https://holiday-countdown-ng.netlify.com/"
 
 //function to setup tweeter share values
 const setUpTweetBtn = (dynamicMessage, dynamicCurl) => {
