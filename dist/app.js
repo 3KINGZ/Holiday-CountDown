@@ -68,7 +68,7 @@ const message = (days, holiday) => {
             case "New-Year":
                 greeting = "it's new year,Hurray, Happy New Year!!!"
                 break;
-            case "valentine":
+            case "Valentine":
                 greeting = "Happy Valentine's Day"
             case "easter":
                 greeting = "Happy easter!!!";
@@ -97,7 +97,7 @@ const message = (days, holiday) => {
                 greeting = "Happy Boxing Day";
                 break;
         }
-        return greeting;
+        return `${greeting}`;
     } else if (days === 1) {
         return `${holiday} is tomorrow`
     } else if (days > 1) {
