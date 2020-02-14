@@ -99,6 +99,7 @@ const message = (days, holiday) => {
                 break;
         }
         return `${greeting}`;
+        isMessage = `${greeting}`
     } else if (days === 1) {
         return `${holiday} is tomorrow`
     } else if (days > 1) {
