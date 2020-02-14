@@ -71,30 +71,30 @@ const message = (days, holiday) => {
             case "Valentine":
                 greeting = "Happy Valentine's Day"
                 break;
-            case "easter":
+            case "Easter":
                 greeting = "Happy easter!!!";
                 break;
-            case "eidAlFitr":
+            case "EidAlFitr":
                 greeting = "Eid Mubarak";
                 break;
-            case "childrenDay":
+            case "ChildrenDay":
                 greeting = "Happy Children's Day"
             case "Democracy":
                 greeting = "Happy Democracy Day";
                 break;
-            case "eidAlAdha":
+            case "EidAlAdha":
                 greeting = "Eid Mubarak";
                 break;
-            case "independenceDay":
+            case "IndependenceDay":
                 greeting = "Happy Independence";
                 break;
                 // case "prophetBirthDay":
                 //     greeting = "Check";
                 //     break;
-            case "christmasDay":
+            case "ChristmasDay":
                 greeting = "Merry Christmas";
                 break;
-            case "boxingDay":
+            case "Boxing-Day":
                 greeting = "Happy Boxing Day";
                 break;
         }
