@@ -70,6 +70,7 @@ const message = (days, holiday) => {
                 break;
             case "Valentine":
                 greeting = "Happy Valentine's Day"
+                break;
             case "easter":
                 greeting = "Happy easter!!!";
                 break;
