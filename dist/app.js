@@ -60,9 +60,10 @@ let isMessage;
 
 //message to be return when the result of the countDown function is being passed
 const message = (days, holiday) => {
-    if (days < 0) {
-        return `${holiday} was ${days} days ago`;
-    } else if (days === 0) {
+    //if (days < 0) {
+        //return `${holiday} was ${days} days ago`;
+   // } 
+       if (days === 0) {
         let greeting;
         switch (holiday) {
             case "New-Year":
