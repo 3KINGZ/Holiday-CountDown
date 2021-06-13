@@ -54,20 +54,23 @@ const countDown = (hols) => {
     countDn = hd.diff(today, "days");
   }
 
-  if (countDn < 0) {
-    const str = String(countDn);
-    return str.slice(1);
-  }
-
   return countDn;
 };
 
 let isMessage;
 
+const filterNegative = (days) => {
+  if (days < 0) {
+    const str = String(countDn);
+    return str.slice(1);
+  }
+  return days;
+};
+
 //message to be return when the result of the countDown function is being passed
 const message = (days, holiday) => {
   if (days < 0) {
-    return `${holiday} was ${days} days ago`;
+    return `${holiday} was ${filterNegative(days)} days ago`;
   } else if (days === 0) {
     let greeting;
     switch (holiday) {
@@ -94,9 +97,6 @@ const message = (days, holiday) => {
       case "IndependenceDay":
         greeting = "Happy Independence";
         break;
-      // case "prophetBirthDay":
-      //     greeting = "Check";
-      //     break;
       case "ChristmasDay":
         greeting = "Merry Christmas";
         break;
