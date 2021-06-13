@@ -58,7 +58,7 @@ let isMessage;
 
 const filterNegative = (days) => {
   if (days < 0) {
-    const str = String(countDn);
+    const str = String(days);
     return str.slice(1);
   }
   return days;
