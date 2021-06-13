@@ -1,50 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
     <title>Holiday-CountDown</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="title">
-    <h1 class="underline">Holiday-CountDown</h1>
-    <p class="notes">where you know the countdown days to notable nigerian holidays and events...</p>
-    <h2 class="countdown">Count-Down To:</h2>
-    <select id="select-holiday">
-        <option value="New-Year">New-Year</option>
+      <h1 class="underline">Holiday-CountDown</h1>
+      <p class="notes">
+        where you know the countdown days to notable nigerian holidays and
+        events...
+      </p>
+      <h2 class="countdown">Count-Down To:</h2>
+      <select id="select-holiday">
+        <option value="New_Year">New-Year</option>
         <option value="Valentine">Valentine</option>
         <option value="Easter">Easter</option>
-        <option value="Eid-Al-Fitr">Eid-Al-Fitr</option>
-        <option value="Children-Day">Children-Day</option>
-        <option value="Democracy-Day">Democracy-Day</option>
-        <option value="Eid-Al-Adha">Eid-Al-Adha</option>
-        <option value="Independence-Day">Independence-Day</option>
+        <option value="Eid_Al_Fitr">Eid-Al-Fitr</option>
+        <option value="Children_Day">Children-Day</option>
+        <option value="Democracy_Day">Democracy-Day</option>
+        <option value="Eid_Al_Adha">Eid-Al-Adha</option>
+        <option value="Independence_Day">Independence-Day</option>
         <!-- <option value="Prophet's-birthday">Prophet's-birthday</option> -->
-        <option value="Christmas-Day">Christmas-Day</option>
-        <option value="Boxing-Day">Boxing-Day</option>
-    </select>
+        <option value="Christmas_Day">Christmas-Day</option>
+        <option value="Boxing_Day">Boxing-Day</option>
+      </select>
     </div>
-    <br>
+    <br />
 
-    <div id="message-container">
-
-    </div>
+    <div id="message-container"></div>
     <div id="tweet">
-         <script>window.twttr = (function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0],t = window.twttr || {};if (d.getElementById(id)) return t;js = d.createElement(s);js.id = id;js.src = "https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, "script", "twitter-wjs"));</script>
+      <script>
+        window.twttr = (function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+          if (d.getElementById(id)) return t;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+          t._e = [];
+          t.ready = function (f) {
+            t._e.push(f);
+          };
+          return t;
+        })(document, "script", "twitter-wjs");
+      </script>
     </div>
 
-<footer>
-        <p class="footer-text">Made with ❤️ by &copy;victor kenneth </p> 
+    <footer>
+      <p class="footer-text">Made with ❤️ by &copy;victor kenneth</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="app.js"></script>
-
-</body>
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
